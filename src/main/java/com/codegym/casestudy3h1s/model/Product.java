@@ -20,6 +20,8 @@ public class Product {
 
     private double price;
 
+    private int amount;
+
     @ManyToOne
     private Category category;
 
