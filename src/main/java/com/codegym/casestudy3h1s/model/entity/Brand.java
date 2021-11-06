@@ -1,4 +1,4 @@
-package com.codegym.casestudy3h1s.model;
+package com.codegym.casestudy3h1s.model.entity;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Category {
+public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

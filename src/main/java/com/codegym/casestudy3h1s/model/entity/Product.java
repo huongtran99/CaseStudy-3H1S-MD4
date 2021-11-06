@@ -1,5 +1,7 @@
-package com.codegym.casestudy3h1s.model;
+package com.codegym.casestudy3h1s.model.entity;
 
+import com.codegym.casestudy3h1s.model.entity.Brand;
+import com.codegym.casestudy3h1s.model.entity.Category;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -20,6 +22,8 @@ public class Product {
 
     private double price;
 
+    private int amount;
+
     @ManyToOne
     private Category category;
 
@@ -27,4 +31,5 @@ public class Product {
     private Brand brand;
 
     private double discount;
+
 }

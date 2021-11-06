@@ -1,4 +1,4 @@
-package com.codegym.casestudy3h1s.model;
+package com.codegym.casestudy3h1s.model.entity;
 
 import lombok.Data;
 
