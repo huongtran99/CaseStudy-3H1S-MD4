@@ -6,13 +6,18 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class Orders {
+public class OrderDetail {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private int quantity;
+
     @ManyToOne
-    private User user;
+    private Orders order;
+
+    @ManyToOne
+    private Product product;
 
 }
