@@ -4,8 +4,6 @@ import com.codegym.casestudy3h1s.model.entity.Brand;
 import com.codegym.casestudy3h1s.model.entity.Category;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
-
-import javax.persistence.ManyToOne;
 import java.util.List;
 
 @Data

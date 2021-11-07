@@ -230,13 +230,3 @@ function searchProductByName() {
         }
     })
 }
-
-$(document).ready(function (){
-    $.ajax({
-        type: "GET",
-        url: `https://provinces.open-api.vn/api/`,
-        success: function (province) {
-            console.log(province)
-        }
-    })
-})

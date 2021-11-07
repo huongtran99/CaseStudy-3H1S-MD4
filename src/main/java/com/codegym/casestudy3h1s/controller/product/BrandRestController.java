@@ -1,7 +1,6 @@
 package com.codegym.casestudy3h1s.controller.product;
 
 import com.codegym.casestudy3h1s.model.entity.Brand;
-import com.codegym.casestudy3h1s.repository.IBrandRepository;
 import com.codegym.casestudy3h1s.service.brand.IBrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
