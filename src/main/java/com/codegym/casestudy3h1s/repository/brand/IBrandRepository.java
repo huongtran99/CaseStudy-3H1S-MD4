@@ -1,4 +1,4 @@
-package com.codegym.casestudy3h1s.repository;
+package com.codegym.casestudy3h1s.repository.brand;
 
 import com.codegym.casestudy3h1s.model.entity.Brand;
 import org.springframework.data.jpa.repository.JpaRepository;

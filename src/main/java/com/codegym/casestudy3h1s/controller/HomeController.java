@@ -1,4 +1,4 @@
-package com.codegym.casestudy3h1s.controller.product;
+package com.codegym.casestudy3h1s.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

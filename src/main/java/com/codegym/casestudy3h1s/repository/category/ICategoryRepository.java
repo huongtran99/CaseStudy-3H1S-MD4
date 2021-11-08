@@ -1,4 +1,4 @@
-package com.codegym.casestudy3h1s.repository;
+package com.codegym.casestudy3h1s.repository.category;
 
 import com.codegym.casestudy3h1s.model.entity.Category;
 import org.springframework.data.jpa.repository.JpaRepository;

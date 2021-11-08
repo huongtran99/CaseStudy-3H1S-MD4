@@ -1,12 +1,10 @@
 package com.codegym.casestudy3h1s.service.brand;
 
 import com.codegym.casestudy3h1s.model.entity.Brand;
-import com.codegym.casestudy3h1s.repository.IBrandRepository;
-import com.codegym.casestudy3h1s.repository.ICategoryRepository;
+import com.codegym.casestudy3h1s.repository.brand.IBrandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

@@ -14,10 +14,21 @@ function getAll() {
                     </tr>`
                 )
             } else {
+
                 let ct = ""
                 for (let i = 0; i < product.content.length; i++) {
                     ct += getProduct(product.content[i])
+                    $.ajax({
+                        url: `http://localhost:8080/products/${product.content[i].id}/images`,
+                        type: "GET",
+                        success: function (image) {
+                            let content =
+                                `${drawImage(image)}`
+                            $(".image").html(content);
+                        }
+                    })
                 }
+
                 $("#list").html(ct);
             }
         }
@@ -35,9 +46,18 @@ function getProduct(product) {
                 <td>${product.category?.name}</td>
                 <td>${product.brand?.name}</td>
                 <td>${product.discount}</td>
+                <td class="image"></td>
                 <td><button type="button" class="btn btn-warning" onclick="showUpdateProduct(${product.id})">Edit</button></td>
                 <td><button type="button" class="btn btn-primary"   onclick="showDeleteProduct(${product.id})">Delete</button></td>
             </tr>`
+}
+
+function drawImage(image) {
+    let content = "";
+    for (let i = 0; i < image.length; i++) {
+        content += `<img src="${image[i].fileImage}">`
+    }
+    return content;
 }
 
 function clear() {

@@ -2,7 +2,7 @@ package com.codegym.casestudy3h1s.service.image;
 
 import com.codegym.casestudy3h1s.model.entity.Image;
 import com.codegym.casestudy3h1s.model.entity.Product;
-import com.codegym.casestudy3h1s.repository.IImageRepository;
+import com.codegym.casestudy3h1s.repository.image.IImageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -61,4 +61,8 @@ public class Product {
         this.discount = discount;
         this.image = image;
     }
+
+    public Product() {
+
+    }
 }

@@ -1,4 +1,4 @@
-package com.codegym.casestudy3h1s.repository;
+package com.codegym.casestudy3h1s.repository.product;
 
 import com.codegym.casestudy3h1s.model.entity.Product;
 import org.springframework.data.domain.Page;

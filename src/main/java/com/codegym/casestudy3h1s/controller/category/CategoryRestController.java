@@ -1,4 +1,4 @@
-package com.codegym.casestudy3h1s.controller.product;
+package com.codegym.casestudy3h1s.controller.category;
 
 import com.codegym.casestudy3h1s.model.entity.Category;
 

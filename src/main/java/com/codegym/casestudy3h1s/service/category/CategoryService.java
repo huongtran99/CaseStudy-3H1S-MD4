@@ -1,7 +1,7 @@
 package com.codegym.casestudy3h1s.service.category;
 
 import com.codegym.casestudy3h1s.model.entity.Category;
-import com.codegym.casestudy3h1s.repository.ICategoryRepository;
+import com.codegym.casestudy3h1s.repository.category.ICategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

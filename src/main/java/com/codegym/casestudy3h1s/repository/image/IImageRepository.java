@@ -1,4 +1,4 @@
-package com.codegym.casestudy3h1s.repository;
+package com.codegym.casestudy3h1s.repository.image;
 
 import com.codegym.casestudy3h1s.model.entity.Image;
 import com.codegym.casestudy3h1s.model.entity.Product;
