@@ -1,5 +1,7 @@
 package com.codegym.casestudy3h1s.controller;
 
+import com.codegym.casestudy3h1s.model.OrderDetail;
+import com.codegym.casestudy3h1s.model.Orders;
 import com.codegym.casestudy3h1s.model.Product;
 import com.codegym.casestudy3h1s.service.product.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,5 +50,38 @@ public class ProductController {
         }
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Product> deleteProduct(@PathVariable Long id) {
+        Optional<Product> productOptional = productService.findById(id);
+        if(!productOptional.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else  {
+            productService.remove(id);
+            return new ResponseEntity<>(productOptional.get(), HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("getProduct/{id}")
+    public ResponseEntity<Product> getProductDetail(@PathVariable Long id) {
+        Optional<Product> productOptional = productService.findById(id);
+        if(!productOptional.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(productOptional.get(), HttpStatus.OK);
+        }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Product> editProduct(@PathVariable Long id, @RequestBody Product product) {
+        Optional<Product> productOptional = productService.findById(id);
+        if(!productOptional.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            if(product.getId() != null) {
+                product.setId(id);
+            }
+            return new ResponseEntity<>(productService.save(product), HttpStatus.OK);
+        }
+    }
 
 }

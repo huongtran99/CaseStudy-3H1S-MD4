@@ -35,6 +35,24 @@ public class ImageController {
     public ResponseEntity<Iterable<Image>> showImages() {
         return new ResponseEntity<>(imageService.findAll(), HttpStatus.OK);
     }
+
+    @GetMapping("{id}")
+    public ResponseEntity<Iterable<Image>> findImagesByProductId(@PathVariable Long id) {
+        return new ResponseEntity<>(imageService.findAllByProductId(id), HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Image> editImage(@PathVariable Long id, Product product, ImageForm imageForm) {
+        Optional<Image> imageOptional = imageService.findById(id);
+        if(!imageOptional.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            if(imageForm.getId() != null) {
+                imageForm.setId(id);
+            }
+            return addImage(product ,imageForm);
+        }
+    }
     @PostMapping
     public ResponseEntity<Image> addImage(Product product, ImageForm imageForm) {
         Optional<Product> productOptional = productService.findProductByCode(product.getCode());
